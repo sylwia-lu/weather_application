@@ -1,0 +1,13 @@
+.App {
+  width: 500px;
+  margin: 50px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.search {
+  width: 300px;
+  margin: 50px auto;
+}
