@@ -1,41 +1,23 @@
 import React from "react";
 import "./App.css";
+import Search from "./components/Search";
+import Result from "./components/Result";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Sprawdź pogodę</h1>
-      <div className="search">
-        <div className="d-flex justify-content-center">
-          <div className="input-group mb-3">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Wpisz miasto"
-              aria-label="Wpisz miasto"
-              aria-describedby="Wpisz miasto"
-            />
-            <div className="input-group-append">
-              <button
-                className="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
-                Szukaj
-              </button>
-            </div>
-          </div>
-        </div>
+const API =
+  "http://api.openweathermap.org/data/2.5/weather?q=zamch&lang=pl&units=metric&APPID=9919cb3e6ca0dd7040f1db77a1043efb";
+
+class App extends React.Component {
+  state = {};
+
+  render() {
+    return (
+      <div className="App">
+        <h1>Sprawdź pogodę</h1>
+        <Search />
+        <Result />
       </div>
-      <div className="result">
-        <ul class="list-group list-group-horizontal-xl">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-        </ul>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
